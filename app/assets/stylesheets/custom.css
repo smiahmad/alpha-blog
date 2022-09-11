@@ -1,0 +1,56 @@
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+.navbar {
+  background-color: black !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#home-container {
+  margin-top: 25px;
+}
+
+.jumbotron {
+  background-image: url('jumbo-copy');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 425px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+  background-color: lightgrey
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 30px; /* Vertically center the text there */
+  text-align: center;
+}
+
+#page-content {
+    flex: 1 0 auto;
+    background-color: lightgrey;
+}
