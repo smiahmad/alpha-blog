@@ -1,10 +1,8 @@
 # Pin npm packages by running ./bin/importmap
 
-#!/usr/bin/env ruby
 pin "application", preload: true
+pin "@rails/ujs", to: "https:ga.jspm.io/npm:#@rails/ujs@7.0.2/lib/assets"
 pin "@hotwired/turbo-rails", to: "turbo.min.js", preload: true
 pin "@hotwired/stimulus", to: "stimulus.min.js", preload: true
 pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
 pin_all_from "app/javascript/controllers", under: "controllers"
-pin "bootstrap", to: "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-pin "@popperjs/core", to: "https://ga.jspm.io/npm:@popperjs/core@2.11.2/lib/index.js"

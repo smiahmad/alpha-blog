@@ -1,26 +1,34 @@
+<div class="container">
+  <%= render 'shared/errors' %>
 
-<% if @article.errors.any? %>
-  <h2>Following errors prevented the article from being saved</h2>
-  <ul>
-    <% @article.errors.each do |error| %>
-      <li><%= error.full_message %></li>
-    <% end %>
-  </ul>
-<% end %>
+  <div class="row justify-content-center">
+    <div class="col-10  form-group row justify-content-center">
+      <%= form_with(model: @article, class: "shadow p-3 mb-3 bg-info rounded", local: true)  do |f| %>
 
-<%= form_with(model: @article, local: true)  do |f| %>
+      <div class="form-group row">
+        <%= f.label :title, class: "col-2 col-form-label text-light" %>
+        <div class="col-10">
+          <%= f.text_field :title, class: "form-control shadow rounded", placeholder: "Title of Article" %>
+        </div>
+      </div>
 
-  <p>
-    <%= f.label :title %><br/>
-    <%= f.text_field :title %>
-  </p>
+      <div class="form-group row">
+        <%= f.label :description, class: "col-2 col-form-label text-light" %>
+        <div class="col-10">
+          <%= f.text_area :description, rows: 10, class: "form-control shadow rounded", placeholder: "Description of Article" %>
+        </div>
+      </div>
 
-  <p>
-    <%= f.label :description %><br/>
-    <%= f.text_area :description %>
-  </p>
+      <div class="col-3 form-group row justify-content-center">
+        <%= f.submit class: "btn btn-outline-light btn-lg" %>
+      </div>
 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+      <% end %>
+    </div>
+
+    <div class="col-10 form-group row justify-content-center">
+      <%= link_to '[ Cancel and Return To Articles ]', articles_path, class: "text-info"%>
+    </div>
+
+  </div>
+</div>
