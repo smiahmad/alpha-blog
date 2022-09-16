@@ -6,6 +6,8 @@
     "jquery": "^3.6.1",
     "popper.js": "^1.16.1",
     "sass": "^1.54.9"
+  },
+  "scripts": {
+    "build:css": "sass ./app/assets/stylesheets/application.css:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
   }
-
 }
