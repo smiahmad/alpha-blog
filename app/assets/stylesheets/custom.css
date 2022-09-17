@@ -54,3 +54,7 @@ body {
     flex: 1 0 auto;
     background-color: lightgrey;
 }
+
+#navbar-link {
+    color: white;
+}
