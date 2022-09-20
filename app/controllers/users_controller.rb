@@ -4,6 +4,22 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    respond_to do |format|
+      if @user.update(user_params)
+        flash[:notice] = "Your account information was successfully updated"
+        format.html { redirect_to articles_url }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def create
     @user = User.new(user_params)
 
