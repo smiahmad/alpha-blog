@@ -2,12 +2,12 @@ class UsersController < ApplicationController
 
   def index
     #debugger
-    @users = User.all
+    @users = User.paginate(page: params[:page], per_page: 3)
   end
 
   def show
     @user = User.find(params[:id])
-    @articles = @user.articles
+    @articles = @user.articles.paginate(page: params[:page], per_page: 3)
   end
 
   def new
@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.update(user_params)
         flash[:notice] = "Your account information was successfully updated"
-        format.html { redirect_to articles_url }
+        format.html { redirect_to @user }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
