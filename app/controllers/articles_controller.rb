@@ -37,7 +37,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.user = current_user
 
-debugger
+    #debugger
     respond_to do |format|
       if @article.save
         flash[:notice] = "Article saved successfully!!"
