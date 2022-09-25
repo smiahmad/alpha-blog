@@ -92,6 +92,7 @@ GEM
       reline (>= 0.3.1)
     digest (3.1.0)
     erubi (1.11.0)
+    ffi (1.15.5-x64-mingw-ucrt)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -226,11 +227,13 @@ DEPENDENCIES
   capybara
   cssbundling-rails
   debug
+  ffi (~> 1.15, >= 1.15.5)
   importmap-rails
   jbuilder
   pg
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
+  rexml
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)

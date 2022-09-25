@@ -38,6 +38,8 @@ gem "jbuilder"
 
  # added pagination gem - imran
  gem 'will_paginate', '~> 3.3'
+ gem 'rexml', require: false
+ gem 'ffi', '~> 1.15', '>= 1.15.5'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data"
